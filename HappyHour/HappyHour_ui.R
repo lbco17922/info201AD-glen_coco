@@ -39,7 +39,8 @@ HappyHour_ui <- fluidPage(
                            ),
                  sidebarLayout(position = "left",
                                sidebarPanel(
-                                 uiOutput("choropleth_ui_region")
+                                 uiOutput("choropleth_ui_region"),
+                                 uiOutput("choropleth_ui_data")
                                ),
                                mainPanel()
                     )

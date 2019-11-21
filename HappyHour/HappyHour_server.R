@@ -6,6 +6,7 @@ source("Data_Visualizations/HH_Choropleth.R")
 
 HappyHour_server <- function(input, output) {
   hh_data <- read.csv("data/HappinessAlcoholConsumption.csv", stringsAsFactors = FALSE)
+  country_coord_data <- read.csv("data/countries.csv", stringsAsFactors = FALSE)
   scatter_choices <- unique(select(hh_data, Region))
   
   output$scatter_ui <- renderUI({
@@ -37,7 +38,7 @@ HappyHour_server <- function(input, output) {
   })
   
   output$general_choropleth <- renderLeaflet({
-    draw_hh_choropleth(hh_data, input$region_choice_2, input$data_choice)
+    draw_hh_choropleth(hh_data, country_coord_data, input$region_choice_2, input$data_choice)
   })
 }
 

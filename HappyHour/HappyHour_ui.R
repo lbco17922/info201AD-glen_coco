@@ -64,7 +64,7 @@ HappyHour_ui <- fluidPage(
           tabPanel(
             "Reflection",
             tags$div(
-              "Sarah Khan: This data set was interesting to analyze because this topic is so controversial, and I 
+              "This data set was interesting to analyze because this topic is so controversial, and I 
               did not know that there were so many other factors that need to be analyzed to understand this topic
               fully. I also think that designing this into a map will be interesting and appealing because it will
               be more user interactive. It was a little frustrating getting the appendix 1 chart onto GitHub, other
@@ -114,10 +114,7 @@ HappyHour_ui <- fluidPage(
       # ----- Tab panel for the conclusions on data -----
       tabPanel(
         "Conclusions",
-        "At first glance, it does not appear that there is a significant worldwide correlation to be made
-        between alcohol consumption per capita, and happiness. However, there are certainly trends to be
-        observed within certain geographical regions, as is seen on the scatter plot visualization. MORE
-        WRITING NEEEDED"
+        includeMarkdown("conclusion.md")
       ),
       
       # ----- Tab panel for the resources on data -----

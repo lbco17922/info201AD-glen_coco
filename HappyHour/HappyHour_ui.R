@@ -1,9 +1,16 @@
 library(shiny)
 library(plotly)
+library(leaflet)
+library(ggplot2)
 
 HappyHour_ui <- fluidPage(
+  
+  tags$head(
+    tags$link(rel = "stylesheet", type = "text/css", href = "HappyHourStyle.css")
+  ),
+  
   titlePanel(
-    "Happy Hour: A Glimpse at the Relationship Between Alcohol Consumption and Happiness Worldwide"
+    h1("Happy Hour: A Glimpse at the Relationship Between Alcohol Consumption and Happiness Worldwide")
   ),
   
   # Main Panel
@@ -15,6 +22,7 @@ HappyHour_ui <- fluidPage(
            tabPanel(
              "Project Overview",
              tags$div(
+               class = "bodytext",
                 "The goal of this project is to determine whether or not a relationship exists with happiness
                 worldwide, and the consumption of alcoholic beverages.  Our group wishes to find out if alcohol
                 actually is the cause of an improvement in mood, or if it causes the opposite, or if it is just
@@ -28,7 +36,8 @@ HappyHour_ui <- fluidPage(
           tabPanel(
             "Context",
             tags$div(
-              "Is there a Problem?:",
+              class = "bodytext",
+              h4("Is there a Problem?:"),
               tags$br(),
               "Alcohol can often be seen as the source of depression and other mental illnesses, yet, many rely 
               on its effects to relieve stress and bring themselves joy. As such, our group aims to understand
@@ -41,7 +50,7 @@ HappyHour_ui <- fluidPage(
               secondary stakeholder may be alcohol companies seeing where their businesses would perform the most
               effectively.", 
               tags$br(), 
-              "Why does it matter?:", 
+              h4("Why does it matter?:"), 
               tags$br(), 
               "Leading back to the problem statement, this matters because our group wishes to find out if alcohol 
               actually is the cause of an improvement in mood. Our research will provide basic evidence for alcohol
@@ -52,6 +61,7 @@ HappyHour_ui <- fluidPage(
           tabPanel(
             "Affiliation",
             tags$div(
+              class = "bodytext",
               "INFO-201A: Technical Foundations of Informatics,", 
               tags$br(), 
               " The Information School,", 
@@ -64,7 +74,8 @@ HappyHour_ui <- fluidPage(
           tabPanel(
             "Reflection",
             tags$div(
-              "This data set was interesting to analyze because this topic is so controversial, and I 
+              class = "bodytext",
+              "Sara: this data set was interesting to analyze because this topic is so controversial, and I 
               did not know that there were so many other factors that need to be analyzed to understand this topic
               fully. I also think that designing this into a map will be interesting and appealing because it will
               be more user interactive. It was a little frustrating getting the appendix 1 chart onto GitHub, other

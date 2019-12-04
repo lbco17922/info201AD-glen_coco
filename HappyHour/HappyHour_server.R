@@ -1,5 +1,6 @@
 library(shiny)
 library(plotly)
+library(ggplot2)
 library(leaflet)
 source("Data_Visualizations/HH_Scatter.R")
 source("Data_Visualizations/HH_Choropleth.R")
